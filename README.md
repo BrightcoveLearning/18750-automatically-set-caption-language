@@ -1,7 +1,7 @@
 <!-- BE SURE TO UPDATE NAME AND LINK TO DOC -->
 
-# 18431-play-video-end-playlist
-For more information about this sample see: https://support.brightcove.com/brightcove-player-sample-play-video-end-playlist.
+# 18750-automatically-set-caption-language
+For more information about this sample see: https://support.brightcove.com/brightcove-player-sample-automatically-set-caption-language.
 
 <p>The purpose and structure of files in this repo are:</p>
 
@@ -23,11 +23,11 @@ For more information about this sample see: https://support.brightcove.com/brigh
     </tr>
     <tr>
       <td>plugin/plugin-name.js</td>
-      <td>The JavaScript for the plugin. An example, actual filename could be <strong>live-custom-error.js</strong>.</td>
+      <td>The JavaScript for the plugin. An example, actual filename could be <strong>auto-language.js</strong>.</td>
     </tr>
     <tr>
       <td>plugin/plugin-name.css</td>
-      <td>The CSS for the plugin. An example, actual filename could be <strong>live-custom-error.css</strong>.</td>
+      <td>The CSS for the plugin. An example, actual filename could be <strong>auto-language.css</strong>.</td>
     </tr>
   </tbody>
 </table>

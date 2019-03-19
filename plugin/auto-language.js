@@ -1,26 +1,4 @@
-<!doctype html>
-<html>
-
-<head>
-  <meta charset="UTF-8">
-  <title>Auto Captions Language</title>
-</head>
-
-<body>
-  <video id="myPlayerID"
-	  data-video-id="6008592337001"
-		data-account="1752604059001"
-		data-player="default"
-		data-embed="default"
-		data-application-id
-		class="video-js"
-		controls
-		width="640"
-		height="360"></video>
-	<script src="//players.brightcove.net/1752604059001/default_default/index.min.js"></script>
-
-  <script>
-    videojs.getPlayer("myPlayerID").ready(function () {
+videojs.registerPlugin('autoLanguage', function() {
       var myPlayer = this;
       myPlayer.on("loadedmetadata", function () {
         // +++ Retrieve the menu options +++
@@ -49,9 +27,5 @@
 
         });
       });
-    });
-  </script>
 
-</body>
-
-</html>
+});
