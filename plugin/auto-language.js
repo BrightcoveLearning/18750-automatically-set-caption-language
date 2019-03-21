@@ -1,31 +1,30 @@
 videojs.registerPlugin('autoLanguage', function() {
       var myPlayer = this;
       myPlayer.on("loadedmetadata", function () {
-        // +++ Retrieve the menu options +++
-        var menuOptions = myPlayer.controlBar.subsCapsButton.menu.children();
 
         // +++ Get the browser language +++
         var browser_language = navigator.language ||
-                               navigator.userLanguage; // IE <= 10;
-        browser_language = browser_language.substr(0,2);
+            navigator.userLanguage; // IE <= 10;
+        browser_language = browser_language.substr(0, 2);
+
+        // +++ Get the captions +++
+        var track_language;
+        var tracks = myPlayer.textTracks();
 
         // +++ Loop through captions +++
-        var track_language;
-        menuOptions.forEach(function (item) {
-          // +++ Set the default caption language +++
-          // When the caption language equals the browser language, then set it as default
+        for (var i = 0; i < (tracks.length); i++) {
+            track_language = tracks[i].language.substr(0, 2);
 
-          if(typeof item.track.language !== 'undefined'){
-            track_language = item.track.language.substr(0,2);
-            if (track_language === browser_language) {
-              item.track.mode = "showing";
+      // +++ Set the default caption language +++
+            // When the caption language equals the browser language, then set it as default
+            if (track_language) {
+                if (track_language === browser_language) {
+                    tracks[i].mode = "showing";
+                } else {
+                    tracks[i].mode = "disabled";
+                }
             }
-            else {
-              item.track.mode = "disabled";
-            }
-          }
-
-        });
-      });
+        }
+    });
 
 });
