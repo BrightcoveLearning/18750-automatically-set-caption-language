@@ -7,17 +7,20 @@
 </head>
 
 <body>
-  <video id="myPlayerID"
-	  data-video-id="6008592337001"
-		data-account="1752604059001"
-		data-player="default"
-		data-embed="default"
-		data-application-id
-		class="video-js"
-		controls
-		width="640"
-		height="360"></video>
-	<script src="//players.brightcove.net/1752604059001/default_default/index.min.js"></script>
+	<div style="width: 960px; height: 540px;">
+		<video-js id="myPlayerID"
+				  data-account="1752604059001" 
+				  data-player="default" 
+				  data-embed="default" 
+				  controls="" 
+				  data-video-id="6008592337001" 
+				  data-playlist-id="" 
+				  data-application-id="" 
+				  width="960" height="540" 
+				  class="vjs-fill">
+	   	</video-js>
+		<script src="https://players.brightcove.net/1752604059001/default_default/index.min.js"></script>
+	</div>
 
   <!-- Custom script for setting the captions language -->
   <script type="text/javascript" src="auto-language.js"></script>
